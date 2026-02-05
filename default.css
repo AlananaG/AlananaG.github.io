@@ -2,45 +2,42 @@ body {
   background-color: #f6ebf1;
   color: #3f3f42;
   font-family: 'Open Sans', Arial, sans-serif;
-  margin: 0;
+  text-align: left;
 }
 
 main {
   max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
   padding: 1rem;
+  text-align: left;
 }
 
 
-h1 {
+h1, h2 {
   font-family: 'Playfair Display', Georgia, serif;
   color: #1c0f2b;
-  text-align: center;
+  text-align: left;
 }
 
-h2 {
-  text-align: center;
-}
+
 
 
 p {
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
 }
 
 
 nav a {
   margin-right: 1rem;
   text-decoration: none;
+  text-align: left;
 }
 
 
 footer {
   background-color: #ccc0ea;
   max-width: 400px;
-  text-align: center;
-  margin: 0 auto;
+  text-align: left;
   padding: 1rem;
   font-size: 1rem;
 }

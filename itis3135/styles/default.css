@@ -1,0 +1,43 @@
+body {
+  background-color: #eadbd6;
+  color: #41363c;
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-align: left;
+}
+
+main {
+  max-width: 900px;
+  padding: 1rem;
+  text-align: left;
+}
+
+
+h1, h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #6e5255;
+  text-align: left;
+}
+
+
+
+
+p {
+  line-height: 1.6;
+  text-align: left;
+}
+
+
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  text-align: left;
+}
+
+
+footer {
+  background-color: #ddbcc4;
+  max-width: 400px;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1rem;
+}
