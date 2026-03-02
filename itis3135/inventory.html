@@ -1,27 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <title>ITIS 3135 | Inventory</title>
-   <link rel="stylesheet" href="styles/default.css">
-   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <title>Book Inventory</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div>
-        <h1>ITIS 3135</h1>
-        <hr>
-        <h2>Highlights</h2>
-        <h1>Alana Green's Jazzy Gecko | ITIS 3135</h1>
-        <h1>----------------------------------------</h1>
-    </div>
 
-  <main>
-    <h2>Inventory</h2>
-    <p>This page will display availability.</p>
-  </main>
-    <div data-include="components/footer.html"></div>
-    <script src="scripts/HTMLInclude.min.js"></script>
+  <h1>Crochet Geckos For Sale</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Gecko</th>
+        <th>Size</th>
+        <th>Expression</th>
+        <th>Color</th>
+        <th>Demand</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr class="Gecko">
+        <td>Tokay</td>
+        <td>Small</td>
+        <td>Mean</td>
+        <td><span class="status">Black</span></td>
+        <td>
+          <span class="rate three">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </td>
+      </tr>
+
+      <tr class="Size">
+        <td>Gold dust</td>
+        <td>Medium</td>
+        <td>Shy</td>
+        <td><span class="status">Green</span></td>
+        <td>
+          <span class="rate one">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </td>
+      </tr>
+
+      <tr class="Expression">
+        <td>Happy</td>
+        <td>Shy</td>
+        <td>Happy</td>
+        <td><span class="status">Brwon</span></td>
+        <td>
+          <span class="rate two">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
 
 </body>
 </html>
