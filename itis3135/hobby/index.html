@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Hobby: Planning a Summer Trip to Japan!</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<style>
+body{
+    margin:0;
+    font-family: "Nunito", "Trebuchet MS", sans-serif;
+    background:#f5e9da;
+    color:#4b2e2b;
+}
+
+header{
+    background:#b23a2a;
+    color:#fff3e8;
+    text-align:center;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:#ffe6d5;
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 8px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+main{
+    padding:20px;
+    max-width:900px;
+    margin:auto;
+}
+
+section{
+    display:none;
+}
+
+section.active{
+    display:block;
+}
+
+h2{
+    border-bottom:3px solid #d9a066;
+    padding-bottom:5px;
+}
+
+figure{
+    margin:20px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th, td{
+    border:1px solid #b23a2a;
+    padding:8px;
+    text-align:left;
+}
+
+th{
+    background:#d9a066;
+}
+
+tr:nth-child(even){
+    background:#f2dfc7;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    border-radius:6px;
+}
+
+figcaption{
+    font-weight:bold;
+    margin-top:5px;
+}
+
+footer{
+    background:#8c3a2b;
+    color:#fff3e8;
+    text-align:center;
+    padding:15px;
+}
+
+footer a{
+    color:#ffd9b8;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+</style>
+
+<script>
+function showSection(id){
+    const sections = document.querySelectorAll("main section");
+    sections.forEach(section => section.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Planning My Summer Japan Trip ☀︎</h1>
+
+<nav>
+<a href="#" onclick="showSection('what')">What ✦</a> |
+<a href="#" onclick="showSection('who')">Who ✦</a> |
+<a href="#" onclick="showSection('when')">When ✦</a> |
+<a href="#" onclick="showSection('where')">Where ✦</a> |
+<a href="#" onclick="showSection('how')">How ✦</a> |
+<a href="#" onclick="showSection('why')">Why</a>
+</nav>
+
+</header>
+
+<main>
+
+<section id="what" class="active">
+<h2>What: My Hobby</h2>
+
+<p>
+One of my favorite hobbies is travelling, and this summer I plan to go to Japan with my family.
+My 2-week itinerary is focuses on exploring a variety of neighborhoods in Japan, particularly
+in the Tokyo prefecture. 
+</p>
+
+<p>
+In order to make the most of my trip, I have arranged the bulk of my itinerary
+in wanderlog in order to group locations by area and title each day accordingly
+to maximaize time efficiency and exploration.
+</p>
+
+<p>
+The goal is to balance sightseeing, food, culture, and relaxing exploration
+throughout the trip to see as much of everything as possible.
+</p>
+
+<figure>
+<img src="images/shibuya.jpg" alt="Shibuya crossing in Tokyo">
+<figcaption>Shibuya Crossing</figcaption>
+<p><em>A famous intersection in Tokyo known for its massive pedestrian crossings.</em></p>
+</figure>
+
+</section>
+
+<section id="who">
+<h2>Who: About Me</h2>
+
+<p>
+Hello! My name is Alana and I am a computer science major at UNC Charlotte who loves to travel.
+This year, I will be traveling abroad with my family in Japan again, but this time with a focus in Tokyo.
+</p>
+
+<p>
+Back in 2007, I lived in Misawa, Aomori with my parents when they were in the military.
+It was a great experience getting to learn some of the Japanese language firsthand and
+Japan's cultural customs. 
+
+</p>
+
+<p>
+From kimono photoshoots to history-rich temples,
+learning about what Tokyo has to offer has me stay excited about travel,
+keeps me motivated in continuing my Japanese studies,
+and gives me something fun to research during my free time.
+</p>
+
+<figure>
+<img src="images/tokyo.jpg" alt="Tokyo skyline">
+<figcaption>Tokyo Skyline</figcaption>
+<p><em>Tokyo mixes modern skyscrapers with traditional culture.</em></p>
+</figure>
+
+</section>
+
+<section id="when">
+<h2>When — Summer 2026</h2>
+
+<p>
+My trip takes place from late July through mid-August.
+Because my family and I intend to take a day trip to Mt Fuji, these dates were chosen in consideration to Mt Fuji's climbing season,
+which runs from early July to September.
+</p>
+
+<p>
+As for Tokyo, summer evenings are especially great for exploring neighborhoods and trying
+street food. Many areas also have seasonal events and festivals during this
+time.
+</p>
+
+<p>
+Considering how the weather can be incredibly hot and humid, 
+I aim to curate my itinerary to where the majority of outdoor activities are
+done in the morning to beat the heat.                 
+</p>
+
+<figure>
+<img src="images/summerfestival.jpg" alt="Japanese summer festival">
+<figcaption>Summer Festival</figcaption>
+<p><em>Many cities host colorful summer festivals during July and August.</em></p>
+</figure>
+
+</section>
+
+<section id="where">
+<h2>Where — Locations in My Itinerary</h2>
+
+<p>
+My itinerary focuses on different neighborhoods in Tokyo along with a day trip
+to Kamakura. Each place has a unique atmosphere and captivating attractions.
+</p>
+
+<p>
+The locations range from busy shopping areas to fascinating historic districts
+with temples and traditional streets. Below is a table of my most favorite areas
+to research.
+</p>
+
+<table>
+<tr>
+<th>Location</th>
+<th>Type of Area</th>
+<th>Main Attractions</th>
+</tr>
+
+<tr>
+<td>Shibuya</td>
+<td>Modern city district</td>
+<td>Shibuya Crossing, Street Kart, Shibuya Sky</td>
+</tr>
+
+<tr>
+<td>Asakusa</td>
+<td>Historic area</td>
+<td>Senso-ji Temple, Nakamise Street, Kimono photoshoots</td>
+</tr>
+
+<tr>
+<td>Ginza</td>
+<td>Luxury shopping district</td>
+<td>Tsukiji fish market, Ginza SIX, Uniqlo</td>
+</tr>
+
+<tr>
+<td>Yanaka</td>
+<td>Old cat-themed Tokyo neighborhood</td>
+<td>Cafe Nekoemon, Tori No Iru cafe, Yanaka Street</td>
+</tr>
+
+<tr>
+<td>Setagaya</td>
+<td>Residential district</td>
+<td>Gotokuji temple, Kichijoji, Sangenjaya</td>
+</tr>
+
+<tr>
+<td>Kamakura</td>
+<td>Day trip from Tokyo</td>
+<td>Hokokuji temple, Sasuke Inari shrine, Komachi Street</td>
+</tr>
+</table>
+
+<figure>
+<img src="images/kamakura.jpg" alt="Kamakura Buddha statue">
+<figcaption>Kamakura Great Buddha</figcaption>
+<p><em>Kamakura is a historic coastal town south of Tokyo known for its temples.</em></p>
+</figure>
+
+</section>
+
+<section id="how">
+<h2>How — Planning the Trip</h2>
+
+<p>
+Planning the trip involves researching transportation, attractions, and food
+locations in order to plan for reservations and lodging. I intend to use Tokyo's
+subway system to my advantage for cost effeciency.
+</p>
+
+<p>
+My outlined trip logistics go as follows:
+</p>
+<ul>
+    <li>keep days 1 & 2 in same area in case of jet lag or flight delays</li>
+    <li>place most popular spots on Mon-Thurs/early to avoid weekend upcharges & large crowds</li>
+    <li>save majority of shopping for end of each day to avoid carrying stuff around all day</li>
+    <li>For Tokyo, daily commutes should be no more than 3 hours</li>
+    <li>leave atleast 1 full free day for flexibility</li>
+</ul>
+
+<p>
+Creating a structured itinerary helps organize the trip so that I can experience a
+lot one area at a time without feeling rushed.
+</p>
+
+<figure>
+<img src="images/train.jpg" alt="Tokyo train station">
+<figcaption>Tokyo Train System</figcaption>
+<p><em>Tokyo’s trains make it easy to travel between neighborhoods.</em></p>
+</figure>
+
+</section>
+
+<section id="why">
+<h2>Why — Why I Enjoy This Hobby</h2>
+
+<p>
+As a fan of anime and cats, it has been my dream to revisit Japan and explore Tokyo!
+With the price of yen being at an all-time low, there is no better time to start planning than now with family.
+</p>
+
+<p>
+Japan offers incredible food, culture, and city life, which makes planning the
+trip especially exciting.
+</p>
+
+<p>
+By the time the trip begins, I already feel familiar with the locations and
+activities thanks to all the planning.
+</p>
+
+<figure>
+<img src="images/ramen.jpg" alt="Bowl of ramen">
+<figcaption>Japanese Food</figcaption>
+<p><em>Trying authentic Japanese food is one of the things I look forward to most.</em></p>
+</figure>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+<a href="https://validator.w3.org/">HTML Validation</a> |
+<a href="https://jigsaw.w3.org/css-validator/">CSS Validation</a> |
+<a href="https://wave.webaim.org/">Accessibility Check</a>
+</p>
+
+<p>
+Alana In Spotlight Consulting © 2026
+</p>
+
+</footer>
+
+</body>
+</html>
