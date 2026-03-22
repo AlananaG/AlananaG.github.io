@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Introduction Form</title>
+<link rel="stylesheet" href="default.css">
+</head>
+
+<body>
+
+<h1>Alana's Charlotte Website</h1>
+<hr>
+<h2>Introduction Form</h2>
+
+<main>
+
+<h3>Please submit the form below.</h3>
+
+<form id="introForm">
+
+<label>First Name:</label>
+<input type="text" id="firstName" value="Alana" placeholder="First Name" required>
+
+<label>Middle Name:</label>
+<input type="text" id="middleName" placeholder="Middle Name">
+
+<label>Last Name:</label>
+<input type="text" id="lastName" value="Green" placeholder="Last Name" required>
+
+<br><br>
+
+<label>Mascot Adjective:</label>
+<input type="text" id="adjective" value="Ambitious" required>
+
+<label>Mascot Animal:</label>
+<input type="text" id="animal" value="Gecko" required>
+
+<br><br>
+
+<label>Picture:</label>
+<input type="file" id="image">
+
+<label>Picture Caption:</label>
+<input type="text" id="caption" value="Photo of daughter, Kizzle." required>
+
+<br><br>
+
+<label>Personal Statement:</label>
+<textarea id="statement" required>
+Hi! I am a senior studying Computer Science with a focus in data science. I enjoy getting to know people and making data look pretty through PowerBI and Python.
+</textarea>
+
+<br><br>
+
+<label>Personal Background:</label>
+<textarea id="personalBackground">
+Hi!! I’m from South Carolina and outside of computer science, I love fashion, cats, and Japanese.
+</textarea>
+
+<br><br>
+
+<h3>Courses</h3>
+
+<ul id="courseList">
+<li><input type="text" class="course" value="ITIS 3135 – Front-End Web Application Development: Sounds fun."></li>
+<li><input type="text" class="course" value="ITCS 3153 – Intro to Artificial Intelligence"></li>
+<li><input type="text" class="course" value="ITCS 3156 – Intro to Machine Learning"></li>
+<li><input type="text" class="course" value="ITCS 3190 – Intro to Cloud Computing"></li>
+<li><input type="text" class="course" value="ITSC 4155 – Software Development Projects"></li>
+</ul>
+
+<button type="button" id="addCourse">Add Course</button>
+
+<br><br>
+
+<label>Quote:</label>
+<textarea id="quote">
+I’m whatever you want me to be, Lieutenant. A partner, buddy to drink with, or just a machine…
+</textarea>
+
+<label>Quote Author:</label>
+<input type="text" id="quoteAuthor" value="Connor, 2018">
+
+<br><br>
+
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+<button type="button" id="clearBtn">Clear</button>
+<button type="button" id="generateHTML">Generate HTML</button>
+<button type="button" id="generateJSON">Generate JSON</button>
+
+</form>
+
+</main>
+
+<script src="scripts/introduction.js"></script>
+<script src="scripts/generate_html.js"></script>
+<script src="scripts/generate_json.js"></script>
+
+</body>
+</html>
