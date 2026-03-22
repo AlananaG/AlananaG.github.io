@@ -27,14 +27,13 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* Main Content */
 main {
   max-width: 900px;
   padding: 20px;
   margin: auto;
 }
 
-h1, h2 {
+h1{
   font-family: "Playfair Display", Georgia, serif;
   color: #6e5255; 
   text-align: left;
