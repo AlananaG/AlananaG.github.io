@@ -1,34 +1,5 @@
-const form = document.getElementById("introForm");
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    generatePage();
-});
-
-document.getElementById("clearBtn").addEventListener("click", function() {
-    document.querySelectorAll("input, textarea").forEach(el => {
-        el.value = "";
-    });
-});
-
-document.getElementById("addCourse").addEventListener("click", function() {
-
-    const list = document.getElementById("courseList");
-
-    const li = document.createElement("li");
-
-    const input = document.createElement("input");
-    input.type = "text";
-    input.className = "course";
-    input.placeholder = "New Course";
-
-    li.appendChild(input);
-    list.appendChild(li);
-});
-
 function generatePage() {
 
-    // get values (short + simple)
     let first = document.getElementById("firstName").value;
     let middle = document.getElementById("middleName").value;
     let last = document.getElementById("lastName").value;
@@ -36,9 +7,10 @@ function generatePage() {
     let adjective = document.getElementById("adjective").value;
     let animal = document.getElementById("animal").value;
 
+    let image = document.getElementById("image").value;
     let caption = document.getElementById("caption").value;
-    let statement = document.getElementById("statement").value;
 
+    let statement = document.getElementById("statement").value;
     let personal = document.getElementById("personalBackground").value;
 
     let quote = document.getElementById("quote").value;
@@ -63,7 +35,7 @@ function generatePage() {
         <h3>${first} ${middle} ${last} | ${adjective} ${animal}</h3>
 
         <figure>
-            <img src="itis3135/images/kittyyy.jpg">
+            <img src="${image}">
             <figcaption>${caption}</figcaption>
         </figure>
 
@@ -89,3 +61,32 @@ function generatePage() {
         </main>
     `;
 }
+
+//-----------------------------------------------------------------------------------------------------------
+const form = document.getElementById("introForm");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    generatePage();
+});
+
+document.getElementById("clearBtn").addEventListener("click", function() {
+    document.querySelectorAll("input, textarea").forEach((el) => {
+        el.value = "";
+    });
+});
+
+document.getElementById("addCourse").addEventListener("click", function() {
+
+    const list = document.getElementById("courseList");
+
+    const li = document.createElement("li");
+
+    const input = document.createElement("input");
+    input.type = "text";
+    input.className = "course";
+    input.placeholder = "New Course";
+
+    li.appendChild(input);
+    list.appendChild(li);
+});
