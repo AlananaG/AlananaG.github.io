@@ -1,12 +1,14 @@
-main {
+header, main {
+    width: 100%;
     max-width: 800px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #fffaf5; 
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-left: auto;
+    margin-right: auto;
+    color: #572636; 
 }
-
+footer {
+    color:#cd775d;
+    margin: 0;
+}
 h2 {
     color: #8b4513; 
     margin-bottom: 10px;
@@ -23,13 +25,31 @@ p {
 }
 
 a {
-    color: #d2691e;
+    color: #e78263;
     text-decoration: none;
 }
 
 body {
     font-family: 'Neucha', sans-serif;
-    background-color: #fff4e6;
+    background-color: #feeed9;
     color: #4b2e2e;
     line-height: 1.6;
+    margin: 0;
+}
+
+img {
+    width: 620px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+nav {
+    color: #873a25;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    background: #3f2a22;
+    padding: 12px;
+    border-radius: 6px;
 }
