@@ -30,7 +30,7 @@ document.getElementById("cupcakes").innerHTML = `
 `;
 
 document.getElementById("strawberries").innerHTML = `
-  <h3>Cookies & More</h3>
+  <h3>Strawberries & More</h3>
     <article class="menu-item">
     <img src="strawberries.png" alt="White Chocolate-Covered Strawberries">
     <section>

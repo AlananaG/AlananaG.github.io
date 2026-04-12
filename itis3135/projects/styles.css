@@ -113,3 +113,23 @@ nav {
 .menu-item section {
   display: block;
 }
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #f9f5ed;
+}
+th, td {
+    border: 1px solid #c09b9b;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #e7c4bd; /* soft pink */
+    color: #333;
+    font-weight: bold;
+}
