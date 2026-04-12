@@ -6,9 +6,11 @@ header, main {
     color: #572636; 
 }
 footer {
-    color:#cd775d;
-    width: 80%;
+    color:#ffe6de;
     margin: 0 auto;
+    background-color: #c78d7b;
+    padding: 10px;
+    border-radius: 6px;
 }
 h2 {
     color: #8b4513; 
@@ -48,7 +50,7 @@ nav {
     color: #873a25;
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 25px;
 
     background: #3f2a22;
     padding: 12px;
