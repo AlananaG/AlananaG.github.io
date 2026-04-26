@@ -16,3 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(moveSlide, 3000);
 });
+
+document.querySelectorAll(".order-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        console.log("Button clicked:", btn.textContent);
+    });
+});
+
