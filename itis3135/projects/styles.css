@@ -6,7 +6,6 @@ body {
     margin: 0;
 }
 
-/* ================= HEADER ================= */
 header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +26,7 @@ header {
     text-decoration: none;
 }
 
-/* ================= NAV ================= */
+/* nav*/
 nav {
     display: flex;
     gap: 25px;
@@ -42,7 +41,7 @@ nav a {
     text-decoration: none;
 }
 
-/* ================= LAYOUT ================= */
+/* text & layout */
 main {
     width: 100%;
     max-width: 1100px;
@@ -58,7 +57,6 @@ footer {
     text-align: center;
 }
 
-/* ================= TEXT ================= */
 h2 {
     color: #8b4513;
     font-family: 'Lemon', cursive;
@@ -76,7 +74,7 @@ p {
     margin-bottom: 15px;
 }
 
-/* ================= FEATURE SECTION ================= */
+/* featured */
 .feature {
     background-color: #ffffff;
     padding: 20px;
@@ -101,7 +99,7 @@ p {
     max-width: 400px;
 }
 
-/* ================= BUTTON ================= */
+/* Button */
 .order-btn {
     display: inline-block;
     background: transparent;
@@ -116,20 +114,18 @@ p {
     transition: all 0.25s ease;
 }
 
-/* hover */
 .order-btn:hover {
     background: #d2691e;
     color: #fff3e6;
 }
 
-/* clicked state (separate class, no chaining) */
 .active-btn {
     background: #d2691e;
     color: #fff3e6;
     transform: scale(1.05);
 }
 
-/* ================= MENU ================= */
+/* menu */
 .menu-item {
     display: flex;
     align-items: center;
@@ -144,7 +140,7 @@ p {
     border-radius: 8px;
 }
 
-/* ================= TABLE ================= */
+/* table & slideshow */
 table {
     width: 100%;
     max-width: 800px;

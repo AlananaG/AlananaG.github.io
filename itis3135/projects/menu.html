@@ -2,42 +2,58 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>Home | Luxury Browns Sweets & Treats</title>
+   <title>Menu | Luxury Browns Sweets & Treats</title>
+
    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="styles.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <script src="index.js"></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lemon&family=Neucha&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Lemon&family=Neucha&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1 class="site-title">
-            <a href="index.html">Luxury Browns Sweets & Treats</a>
-        </h1>
-        <nav>
-            <a href="about.html">About</a> |
-            <a href="menu.html">Menu</a> |
-            <a href="rewards.html">Rewards</a> |
-            <a href="events.html">Events</a> |
-            <a href="contact.html">Order</a>
-        </nav>
-    </header>
+
+<header>
+    <h1 class="site-title">
+        <a href="index.html">Luxury Browns Sweets & Treats</a>
+    </h1>
+
+    <nav>
+        <a href="about.html">About</a> |
+        <a href="menu.html">Menu</a> |
+        <a href="rewards.html">Rewards</a> |
+        <a href="events.html">Events</a> |
+        <a href="contact.html">Order</a>
+    </nav>
+</header>
 
 <main>
-  <h1>Luxury Browns Sweets & Treats</h1>
-  <hr>
+
   <h2>Our Menu</h2>
+  <button class="order-btn filter-btn" data-filter="all">All</button>
+  <button class="order-btn filter-btn" data-filter="cakes">Cakes</button>
+  <button class="order-btn filter-btn" data-filter="cupcakes">Cupcakes</button>
+  <button class="order-btn filter-btn" data-filter="strawberries">Strawberries</button>
+
   <section id="cakes">
-    <h3>Cakes</h3>
+      <h2 class="sr-only">Cakes</h2>
   </section>
-  <section id="cupcakes"><h3>Cupcakes</h3></section>
-  <section id="strawberries"><h3>Strawberries</h3></section>
-  <hr>
-  <h3><em>More coming soon!</em></h3>
+
+  <section id="cupcakes">
+      <h2 class="sr-only">Cupcakes</h2>
+  </section>
+
+<section id="strawberries">
+    <h2 class="sr-only">Strawberries</h2>
+</section>
+
+    <hr>
+
+    <h3><em>More coming soon!</em></h3>
 
 </main>
+
 <footer>
     <p>
         <a href="https://validator.w3.org/">HTML Validation</a> |
@@ -46,7 +62,8 @@
     <p>&copy; 2021 Luxury Browns Sweets & Treats</p>
 </footer>
 
-<script src="scripts/HTMLInclude.min.js"></script>
+<!-- JS (IMPORTANT: keep at bottom for DOM readiness) -->
 <script src="menu.js"></script>
+
 </body>
 </html>
