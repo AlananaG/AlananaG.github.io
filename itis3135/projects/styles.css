@@ -116,13 +116,17 @@ p {
     transition: all 0.25s ease;
 }
 
+/* hover */
 .order-btn:hover {
     background: #d2691e;
     color: #fff3e6;
 }
 
-.order-btn:active {
-    transform: scale(0.97);
+/* clicked state (separate class, no chaining) */
+.active-btn {
+    background: #d2691e;
+    color: #fff3e6;
+    transform: scale(1.05);
 }
 
 /* ================= MENU ================= */

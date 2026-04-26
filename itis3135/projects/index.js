@@ -5,12 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let index = 0;
 
     function moveSlide() {
-        index++;
-
-        if (index >= slides.length) {
-            index = 0;
-        }
-
+        index = (index + 1) % slides.length;
         track.style.transform = `translateX(-${index * 100}%)`;
     }
 
@@ -19,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.querySelectorAll(".order-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
-        console.log("Button clicked:", btn.textContent);
+        btn.classList.toggle("active");
     });
 });
-
