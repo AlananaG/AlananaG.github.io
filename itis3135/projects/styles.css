@@ -26,6 +26,11 @@ header {
     text-decoration: none;
 }
 
+.site-title a:hover {
+    color: #ffece7;
+    font-size: 27px;
+    text-decoration: none;
+}
 /* nav*/
 nav {
     display: flex;
@@ -39,6 +44,10 @@ nav {
 nav a {
     color: #f0b5a3;
     text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffe0d4;
 }
 
 /* text & layout */
