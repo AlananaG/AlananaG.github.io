@@ -13,7 +13,11 @@ header {
   border-bottom: 3px solid #ddbcc4; 
 }
 
-
+        img {
+        border-radius: 15px;
+        width: 400px;
+        height: 300px;
+        }
 nav a {
   color: #fce8e6; 
   text-decoration: none;
@@ -67,9 +71,9 @@ footer {
 }
 
 footer a {
-  color: #ddbcc4; 
-  text-decoration: none;
+  color: #ddbcc4;
   font-weight: bold;
+  text-align: center;
 }
 
 footer a:hover {

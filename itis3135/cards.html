@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gecko Cards</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+      background-color: #143d2c;
+    }
+
+    #playing-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      width: 150px;
+      height: 220px;
+      background-color: #f7fff4;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left {
+      display: flex;
+      align-self: flex-start;
+      font-size: 18px;
+    }
+
+    .middle {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      gap: 6px;
+      text-align: center;
+    }
+
+    .right {
+      display: flex;
+      align-self: flex-end;
+      font-size: 18px;
+      transform: rotate(180deg);
+    }
+
+    .green {
+      color: #1f7a3f;
+    }
+
+    .gold {
+      color: #b8860b;
+    }
+
+    .blue {
+      color: #176b87;
+    }
+  </style>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+  <main id="playing-cards">
+    <h1>Playing Gecko Cards</h1>
+
+    <div class="card">
+      <div class="left green">A 🦎</div>
+      <div class="middle green">
+        <span>🦎</span>
+        <span>Climbing Gecko</span>
+      </div>
+      <div class="right green">A 🦎</div>
+    </div>
+
+    <div class="card">
+      <div class="left gold">K 🦎</div>
+      <div class="middle gold">
+        <span>🦎</span>
+        <span>Golden Gecko</span>
+      </div>
+      <div class="right gold">K 🦎</div>
+    </div>
+
+    <div class="card">
+      <div class="left blue">7 🦎</div>
+      <div class="middle blue">
+        <span>🦎</span>
+        <span>Night Gecko</span>
+      </div>
+      <div class="right blue">7 🦎</div>
+    </div>
+
+  </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
