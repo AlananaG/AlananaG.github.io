@@ -2,71 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Book Inventory</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Gecko Inventory</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
 
+table {
+  margin: auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th,
+td {
+  border: 1px solid black;
+}
+
+tr[class="owned"] {
+  background-image: linear-gradient(to right, #d4edda, white);
+}
+
+tr[class="wishlist"] {
+  background-image: linear-gradient(to right, #f8d7da, white);
+}
+
+tr[class="researching"] {
+  background-image: linear-gradient(to right, #fff3cd, white);
+}
+
+span {
+  display: inline-block;
+}
+
+tr[class="owned"] span[class="status"] {
+  border: 2px solid green;
+  background-image: linear-gradient(to right, #b3ffcc, #e6fff2);
+}
+
+tr[class="wishlist"] span[class="status"] {
+  border: 2px solid red;
+  background-image: linear-gradient(to right, #ffcccc, #ffe6e6);
+}
+
+tr[class="researching"] span[class="status"] {
+  border: 2px solid orange;
+  background-image: linear-gradient(to right, #ffe5b4, #fff8dc);
+}
+
+span[class="status"],
+span[class^="rate"] {
+  height: 25px;
+  width: 90px;
+}
+
+span[class^="rate"] > span {
+  border-radius: 50%;
+  margin: 2px;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+}
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+span[class~="two"] span:nth-child(1),
+span[class~="two"] span:nth-child(2) {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(to right, gold, orange);
+}
+</style>
 <body>
 
-  <h1>Crochet Geckos For Sale</h1>
+  <div data-include="components/header.html"></div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Gecko</th>
-        <th>Size</th>
-        <th>Expression</th>
-        <th>Color</th>
-        <th>Demand</th>
-      </tr>
-    </thead>
+  <main>
+    <h2>Gecko Inventory</h2>
 
-    <tbody>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Habitat</th>
+          <th>Status</th>
+          <th>Rarity</th>
+        </tr>
+      </thead>
 
-      <tr class="Gecko">
-        <td>Tokay</td>
-        <td>Small</td>
-        <td>Mean</td>
-        <td><span class="status">Black</span></td>
-        <td>
-          <span class="rate three">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </td>
-      </tr>
+      <tbody>
 
-      <tr class="Size">
-        <td>Gold dust</td>
-        <td>Medium</td>
-        <td>Shy</td>
-        <td><span class="status">Green</span></td>
-        <td>
-          <span class="rate one">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </td>
-      </tr>
+        <tr class="owned">
+          <td>Leopard Gecko</td>
+          <td>Terrestrial</td>
+          <td>Desert</td>
+          <td><span class="status">Owned</span></td>
+          <td>
+            <span class="rate three">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </td>
+        </tr>
 
-      <tr class="Expression">
-        <td>Happy</td>
-        <td>Shy</td>
-        <td>Happy</td>
-        <td><span class="status">Brwon</span></td>
-        <td>
-          <span class="rate two">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </td>
-      </tr>
+        <tr class="wishlist">
+          <td>Crested Gecko</td>
+          <td>Arboreal</td>
+          <td>Rainforest</td>
+          <td><span class="status">Wishlist</span></td>
+          <td>
+            <span class="rate one">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </td>
+        </tr>
 
-    </tbody>
-  </table>
+        <tr class="researching">
+          <td>Tokay Gecko</td>
+          <td>Aggressive</td>
+          <td>Tropical</td>
+          <td><span class="status">Researching</span></td>
+          <td>
+            <span class="rate two">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="scripts/HTMLInclude.min.js"></script>
 
 </body>
 </html>
+
