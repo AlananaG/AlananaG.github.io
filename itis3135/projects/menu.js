@@ -1,3 +1,4 @@
+//Menu page's drop down list for each bakery category
 document.addEventListener("DOMContentLoaded", function () {
 
     const main = document.querySelector("main");
@@ -56,28 +57,31 @@ document.addEventListener("DOMContentLoaded", function () {
             main.appendChild(h2);
 
             const h3 = document.createElement("h3");
-            h3.textContent = "The Latest";
+            h3.textContent = "Choose a Category";
             main.appendChild(h3);
 
-            main.appendChild(document.createElement("hr"));
+            const categoryContainer = document.createElement("section");
+            categoryContainer.className = "menu-category-container";
 
             for (let k in menu) {
 
                 const cat = menu[k];
 
                 const btn = document.createElement("button");
-                btn.className = "order-btn";
+                btn.className = "menu-card";
 
                 btn.innerHTML =
-                    "<img src='" + cat.image + "' style='width:200px; display:block; border-radius:10px;'>" +
+                    "<img src='" + cat.image + "' alt='" + cat.title + "'>" +
                     "<p>" + cat.title + "</p>";
 
                 btn.addEventListener("click", function () {
                     render("items", k);
                 });
 
-                main.appendChild(btn);
+                categoryContainer.appendChild(btn);
             }
+
+            main.appendChild(categoryContainer);
         }
 
         else if (view === "items") {
@@ -98,6 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
             title.textContent = cat.title;
             main.appendChild(title);
 
+            const itemsContainer = document.createElement("section");
+            itemsContainer.className = "menu-items-container";
+
             for (let i = 0; i < cat.items.length; i++) {
 
                 const item = cat.items[i];
@@ -106,17 +113,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 article.className = "menu-item";
 
                 article.innerHTML =
-                    "<img src='" + item.img + "'>" +
+                    "<img src='" + item.img + "' alt='" + item.name + "'>" +
                     "<section>" +
                     "<h4>" + item.name + "</h4>" +
                     "<p>" + item.desc + "</p>" +
                     "</section>";
 
-                main.appendChild(article);
+                itemsContainer.appendChild(article);
             }
+
+            main.appendChild(itemsContainer);
         }
     }
 
     render("categories");
-
 });
