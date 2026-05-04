@@ -15,7 +15,9 @@ header {
     padding: 12px 80px;
     background: #3f2a22;
 }
-
+img {
+    border-radius: 15px;
+    }
 .site-title {
     margin: 0;
     font-size: 26px;
