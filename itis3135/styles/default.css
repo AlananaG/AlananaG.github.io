@@ -1,6 +1,5 @@
 body {
-  background-color: #eadbd6;
-  color: #41363c;
+  background-color: #f5e4df;
   font-family: 'Open Sans', Arial, sans-serif;
   text-align: left;
 }
@@ -39,7 +38,7 @@ main {
 
 h1{
   font-family: "Playfair Display", Georgia, serif;
-  color: #6e5255; 
+  color: #61262c; 
   text-align: left;
 }
 
@@ -50,6 +49,7 @@ h2 {
 }
 
 p {
+  color: #70232b;
   text-align: left;
   margin-bottom: 1rem;
 }
@@ -61,7 +61,7 @@ nav a {
   text-align: left;
 }
 
-
+/*Footer*/
 footer {
   background-color: #6e5255; 
   color: #fce8e6; 
