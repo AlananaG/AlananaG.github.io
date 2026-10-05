@@ -101,38 +101,61 @@
                     Pregnancy categories vary significantly across therapeutic groups, with the analgesic therapeutic group generally being the safest for pregnant women, and lipid-lowering being the least safe (figure 4)
                 </li>
                 <li>
-                    
+
                 </li>
             </ul>
 
-
-        <section>
             <h2>Process</h2>
 
             <p>
-                Preprocessing, data cleaning, etc
+                Before training the machine learning models, the dataset was prepared through Python and loaded with the pandas import, with an additional copy saved for visual analysis. df.shape confirmed the size of the dataset matching the project criteria, displaying (10000, 20), and df.dtypes was used to examine all datatypes of the features provided. Next, null values were checked with df.isnull().sum() to address any potential null fields before proceeding. id was a dropped column due to its lack of meaningful predictive information. 
             </p>
-        </section>
+            <p>
+                The target variable in this analysis was the therapeutic group, which represents the drug classification being predicted, while the remaining columns were used as input features. Although the numerical fields did not need transformation, categorical variables were handled with one-hot encoding, also known as OneHotEncoder, through Scikit-learn (“1. Supervised learning — scikit-learn 1.8.0 documentation”) and paired with handle_unkown=”ignore” for new categories to be processed efficiently for testing. 
+            </p>
+            <p>All imports used:</p>
+            <ul>
+                <li>Data Handling & visuals</li>
+                <li>Model selection</li>
+                <li>Preprocessing</li>
+                <li>Pipeline & Models</li>
+                <li>Evaluation</li>
+            </ul>
 
         <section>
-            <h2>Challenges & What I Learned</h2>
+            <h2>Methods</h2>
+            <h3><em>Logistuc Regression & Gradient Boosting</em></h3>
 
             <p>
-                challenges
+                The first model used was logistic regression, a classification model implemented from the Scikit-learn pipeline. It predicts the therapeutic group by assuming linear relationships between the encoded drug features and target variable. Since the dataset originally featured many categorical features, one-hot encoding was especially important to implement before running the model as it can only interpret features in numerical form. max_iter=1000 was included in the building of this model to allow enough iterations for proper convergence.
             </p>
 
             <p>
-                learned
+                The second algorithm tested was gradient boosting, a learning method that involves building numerous decision trees in sequence, with each new tree focusing on correcting any mistakes of the prior. This allows for the model to tackle more complex patterns in the data, which is useful for pharmaceutical classification as drug categories may depend on combinations of other features rather than just one simple variable.
             </p>
-        </section>
+            <p>
+                Overall, these two models were chosen due to how they represent contrasting levels of complexity. Logistic regression offers a more interpretable classification method, while gradient boosting specializes in providing a stronger nonlinear model to capture even more complex relationships. Comparing both models makes it possible to know whether or not a basic linear model or an advanced ensemble method was enough for this dataset in providing the best performance.
+            </p>
+     
 
-        <section>
             <h2>Results</h2>
+            <h3>
+                <em>The Experimental Setup</em>
+            </h3>
 
             <p>
-                Useful for identifying trends with ease
+                The pharmaceutical dataset was divided into a 80/20 split of training and testing sets, meaning 80% of the data was used for training while the remaining 20% served as evaluation. Model performance was evaluated using a classification report, including metrics such as accuracy, precision, recall, and f1-score. 
             </p>
-        </section>
+
+            <h3><em>Model Performance & Observations</em></h3>
+            <p>
+                As shown in the classification reports below (figures 5 and 6), both logistic regression and gradient boosting achieved 1.0 accuracy in training and testing accuracy, indicating perfect classification in all therapeutic groups. While at first glance, these models performed exceptionally well, it is important to note that the dataset as a whole is synthetic and not completely representative of real-world scenarios.
+            </p>
+            <p>
+                Through <em>print(df["therapeutic_group"].value_counts())</em>, the class distribution of therapeutic groups confirmed that the dataset is relatively balanced, ranging between approximately 600 to 2000 samples per class, meaning bias is not a concern here.
+
+            </p>
+     
 
         <p>
             <a href="#" class="order-btn">View Project</a>
