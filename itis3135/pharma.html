@@ -74,14 +74,36 @@
             </p>
         </section>
         <h2>Visualizations</h2>
-        <img src="pharma_features.png"
+        <figure>
+            <img src="pharma_features.png"
+                        alt="Feature importance graph">
+            <figcaption>Figure 1: Feature importance graph through gradient boosting in a bar graph.
+            </figcaption>
+        </figure>
+        <hr>
+        <figure>
+            <img src="pharma_heatmap1.png"
              alt="Screenshot of Project Name">
-        <img src="pharma_heatmap1.png"
+             <figcaption>Figure 2: Indication category vs Therapeutic Group through a heatmap.</figcaption>
+        </figure>
+        <hr>
+        <figure>
+            <img src="pharma_heatmap2.png" alt="2nd heatmap">
+            <figcaption>Figure 3: Top 15 active ingredients vs Therapeutic Group depicted through a heatmap.</figcaption>
+        </figure>
+        <hr>
+        <figure>
+            <img src="pharma_stackedbar.png"
+             alt="stacked bar graph">
+             <figcaption>Figure 4: Pregnancy Distribution Across Therapeutic Groups portrayed through a stacked bar graph and color-coded based on safety risk.</figcaption>
+        </figure>
+        <hr>
+        <figure>
+            <img src="pharma_boxplot.png"
              alt="Screenshot of Project Name">
-        <img src="pharma_stackedbar.png"
-             alt="Screenshot of Project Name">
-        <img src="pharma_boxplot.png"
-             alt="Screenshot of Project Name">
+             <figcaption>Figure 5: Dosage strength vs pregnancy distribution through a box plot</figcaption>
+        </figure>
+        
         
 
             <h2>Data Analysis</h2>
@@ -155,13 +177,39 @@
                 Through <em>print(df["therapeutic_group"].value_counts())</em>, the class distribution of therapeutic groups confirmed that the dataset is relatively balanced, ranging between approximately 600 to 2000 samples per class, meaning bias is not a concern here.
 
             </p>
+            <p>Moreover, grouping pharmacological classes with therapeutic groups showcased an firm relationship between, with many of said classes mapping almost directly to a single therapeutic group. This was done through df.groupby(["pharmacological_class", "therapeutic_group"]).size().head(20).</p>
      
 
-        <p>
-            <a href="#" class="order-btn">View Project</a>
-            <a href="#" class="order-btn">View Code</a>
-        </p>
 
+        <img src="pharma_lr.png"
+             alt="Screenshot of Project Name">
+        <img src="pharma_gb.png"
+             alt="Screenshot of Project Name">
+        <img src="pharma_cm.png"
+             alt="Screenshot of Project Name">
+        <h3><em>Analysis & Experimentation</em></h3>
+        <p>
+            The results strongly indicate highly predictive relationships between both input features and the target variable and that both models are able to learn patterns well with minimal error. The fact that logistic regression performs just as perfectly as gradient boosting highlights that a simple linear decision boundary is sufficient enough to classify the data appropriately. The lack of misclassification in the confusion matrix (figure 7) reinforces the conclusion that this dataset has very separable class structures.
+        </p>
+        <p>
+            Regarding experimentation, pharmacological_class and indication_category were dropped as input variables in order to determine how strongly each model relied on these highly predictive fields. These particular columns were chosen based on their strong presence in gradient boosting’s strong feature importance graph in figure 1. The results of this feature reduction showed that once again both models performed perfectly with no drop in accuracy, which further goes to prove that the models at hand were highly robust. Overall, these findings suggest that many features in the dataset contain strong predictive signals independently, ultimately simplifying the classification task.
+        </p>
+        
+        <h2>Conclusions</h2>
+        <p>
+            At its core, this project demonstrated how incredibly beneficial machine learning techniques can be in classifying pharmaceutical drugs into therapeutic groups. Both logistic regression and gradient boosting models presented pin-point accuracy in their classification performances, indicating clearly defined and predictive relationships are within the dataset at hand.
+        </p>
+        <p>
+            Throughout this journey, one of the most important things I learned was how to preprocess a multi-class categorical dataset. As a data analyst who had only worked with very simple classification datasets, I had to research more about sklearn and its imports in order to build machine models effectively. This challenge was addressed by using one-hot encoding along with reinforcing performance through classification reports and a confusion matrix.
+        </p>
+        <p>
+            In sum, this analysis shows the potential impact of machine learning in healthcare in order to better aid medical professionals in making informed clinical decisions and support safer decision-making for pregnant patients.
+        </p>
+        <p>
+            <a href=" https://github.com/AlananaG/finalproject_itsc3156" class="order-btn">View Github Repo</a>
+
+            <a href="https://www.kaggle.com/datasets/mdmahfuzsumon/pharma-dataset-drug-classes-interactions-and-cli-pr?resource=download" class="order-btn">View Dataset</a>
+        </p>
     </main>
 
     <div data-include="components/footer.html"></div>
