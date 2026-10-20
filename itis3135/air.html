@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alana's Portfolio | Trend Analysis in Healthcare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lemon&family=Neucha&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gochi+Hand&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lemon&family=Neucha&family=Outfit:wght@100..900&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/portfolio.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>Alana's Coding Portfolio</h1>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="resume.html">My Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Air Quality Trends | Feburary 2026</h1>
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                Air pollution remains as one of the most persistent public and environmental health issues worldwide. Monitoring air quality effectively and continuously stands vital for understanding pollutant behavior and how to address it through carefully-crafted policies. This project aims to analyze air quality data from a city in Italy between March 2004 and February 2005. The basis of my research, "Air Quality Dataset", includes significant features such as over 9,000 hourly records of sensor readings, time frames key pollutants such as CO, nitrogen oxides, benzene, and more.
+            </p>
+
+        
+
+        <h3>Regression & Data Understanding</h3>
+        <p>
+            Regression is a method used to showcase the relationship between two variables. It predicts a numerical result to analyze how significantly said variables are related. Types of regression models used in this project include linear regression and random forest regression in order to identify how exactly environmental factors influence temperature.
+        </p>
+        <hr>
+        <h3>Pre-processing</h3>
+        <p>
+            <u>
+                Kagglehub and Pandas imports: Ensures data is loaded and read correctly. Starting out, I...
+            </u>
+        </p>
+
+        <ul>
+            <li>Changed data types in order for the information to be viable for machine models</li>
+            <li>Significant bits of code in this regard included: <br>
+                <em>df.columns & df.info() <br> df = df.drop(columns=["Unnamed: 15", "Unnamed: 16", "Date", "Time"]) <br>
+                for col in df.select_dtypes(include='object').columns: 
+           df[col] = pd.to_numeric(df[col], errors='coerce')</em>
+            </li>
+            <li>Viewed what columns featured in the dataset and determined what data types to remove.</li>
+        </ul>
+        <p>
+            <u>
+            The Statsmodel was then used to conduct staistical tests, including a summary of my Ordinary Least Squares (OLS) regression model.
+            The X variable in this project represented the temperature, and was compared to the y variable which represented every other column remaining in the dataset after data cleaning.
+            </u>
+        </p>
+        <ul>
+            <li>The code goes as follows: <br>
+                <em>target = 'T' <br>
+                X = df.drop(columns=[target])<br>
+                y = df[target]<br>
+                X2 = sm.add_constant(X)<br>
+                est = sm.OLS(y, X2)<br>
+                est2 = est.fit()<br>
+                est2.summary()</em>
+            </li>
+        </ul>
+        <p>
+            <u>sklearn: Vital in providing sufficient tools for machine learning models.</u>
+            
+        </p>
+        <ul>
+            <li>Used to perform random forest regression testing to identify its R-squared value and conduct train test split testing</li>
+            <li>My formation of the random forest regression machine model:</li>
+        </ul>
+
+        <img src="img/airsklearn.png"
+             alt="Screenshot of sklearn code">
+
+        <p><u>            Seaborn and matplotlib.plyplot: Specializes in generating graphs and was used to highlight the relationshop between the environment and temperature.
+</u></p>
+        <ul>
+            <li>For my Principal Component Analysis (PCA) findings:<br>
+                <em>plt.scatter(pca_df[0], pca_df[1], c=y, cmap='viridis')
+                plt.colorbar()</em>
+                
+            </li>
+        </ul>
+
+        <p><u>mpl_toolkits.mplot3d: Generates 3D Graphs</u></p>
+        <ul><li>The 3D PCA model set up:<br>
+            <em>
+            pca = PCA(n_components = 3, random_state = 7)<br>
+            pca_mdl = pca.fit_transform(x)<br>
+            pca_df = pd.DataFrame(pca_mdl)<br>
+            pca_df.head()
+            </em>
+            
+        </li></ul>
+
+        <hr>
+        <h3>Modelling & Evaluation</h3>
+        <p><u>Experiment 1: Ordinary Least Squares With Linear Regression</u></p>
+
+        <p>
+            Key interpretations:
+        </p>
+        <ul>
+            <li>When it comes to temperature, absolute humidity has the strongest positive impact. 
+                <ul>
+                    <li>To present this visually, I developed a scatterplot showing the relationship between temperature and the pollutant CO2. There is a stark connection between the two when the temperature lies anywhere between -4 to 44 degrees Celsius.</li>
+                </ul>
+            <li>Pollutants, with NO2 being the most notable, have a minor influence on temperature, likely serving as correlations rather than direct cause and effect.</li>
+            <li>The model's R-squared sits at 95%, representing high predictive accuracy.</li>
+        </ul>
+        <img src="img/aq1.png" alt="OLS Regression Results">
+        <img src="img/aq2.png" alt="AH vs T">
+
+        <p><u>Experiment 2: PCA</u></p>
+        <p>Key interpretations</p>
+        <ul>
+            <li>Based on the PCA loadings matrix, it is assumed that each axis was grouped be overall enviornmental factors, pollutants, and humidity</li>
+            <li>3D map showcases how each dimension impacts temperature through a blue to red gradient</li>
+            <li>Temperature tends to rise as air pollution and humidity increases</li>
+        </ul>
+
+        <img src="img/aq3.png" alt="PCA visualizations">
+
+        <p><u>Experiment 3: Random Tree Regression</u></p>
+        <p>Key interpretations:</p>
+        <ul>
+            <li>Random forest holds 99% prediction accuracy.</li>
+            <li>Handles outliers better compared to linear regression.</li>
+        </ul>
+        <img src="img/aq4.png" alt="random forest visualizations">
+        <hr>
+        <h3>Impact & Conclusion</h3>
+        <p>Overall:</p>
+        <ul>
+            <li>Random forest has the highest predictive accuracy at 99.8%, which stands as a slight improvement from linear regression's 99.5%.</li>
+            <li>Linear regression was most specific in values, marking absolute humidity as the main factor impacting temperature.</li>
+            <li>Based on PCA, temperature rises as air pollution and humidity increases. Conducting a loadings matrix helped provide more meaning to what PC1, 2, and 3 generally imply.</li>
+        </ul>
+        <p>Impact:</p>
+        <ul>
+            <li>Pros:
+                <ul>
+                    <li>Original dataset contains at least 9k response values and features a multitude of pollutants</li>
+                    <li>Environmental scientists, health officials, and city planners would all benefit from this data by studying pollutant behavior and weather correlations in order to develop better environmental policies. Additionally, this could help form enhanced predictive systems for weather, which would in turn benefit immunocompromised individuals in the area.</li>
+                </ul>
+            </li>
+            <li>Cons:
+                <ul>
+                    <li>Information in the dataset is only limited to a small city in Italy, and does not address how pollutant behavior in different environments/regions.</li>
+                    <li>No obvious target variable in the dataset.</li>
+                </ul>
+            </li>
+        </ul>
+        
+
+
+        </section>
+
+        <p>
+            <a href="https://drive.google.com/file/d/1cwXBo2DFTssIes64W38YA5LSwYaXDPR9/view?usp=sharing" class="order-btn">Explore Code</a>
+            <a href="https://www.kaggle.com/datasets/fedesoriano/air-quality-data-set" class="order-btn">View Dataset</a>
+        </p>
+
+
+
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+</html>
